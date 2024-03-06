@@ -50,7 +50,7 @@ get('/paper') do
 
 end
 
-get('/play_scissors') do
+get('/scissors') do
 
   @game_shapes = ["rock", "paper", "scissors"].sample
   @prog_shoot = @game_shapes
