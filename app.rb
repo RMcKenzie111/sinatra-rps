@@ -50,7 +50,20 @@ get('/paper') do
 
 end
 
-=begin
 get('/play_scissors') do
+
+  @game_shapes = ["rock", "paper", "scissors"].sample
+  @prog_shoot = @game_shapes
+  @print_user = "We played scissors!"
+  @print_prog = "They played #{@prog_shoot}!"
+  
+  if @prog_shoot == "scissors"
+    @result = "We tied!"
+  elsif @prog_shoot == "rock"
+    @result = "We lost!"
+  else 
+    @result = "We won!"
+  end
+  
+  erb(:scissors)
 end
-=end
